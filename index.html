@@ -1,25 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Psychic Game</title>
 </head>
+
 <body>
 
-<h1>The Psychic Game</h1>
+    <h1>The Psychic Game</h1>
 
-<h3>Guess what letter I'm thinking of</h3>
-    
-<script type= "text/javascript">
+    <div>
+        <p id="directions-text"> Guess what letter I am think of</p>
+        <p id="userchoice-text"></p>
+        <p id="computerchoice-text"></p>
+        <p id="wins-text"></p>
+        <p id="losses-texts"></p>
+        <p id="guessesleft-text"></p>
+        <p id="yourGuessesSoFar-text"></p>
 
 
+    </div>
+
+    <script type="text/javascript">
+
+        var computerchoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", 'r', "s", "t", "u", "v", "w", "x", "y", "z"];
+
+        var userGuess = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", 'r', "s", "t", "u", "v", "w", "x", "y", "z"];
+
+        var res = str.toLowerCase();
+
+        var wins = 0;
+        var losses = 0;
+        var guesses left = 0;
 
 
+        var directionsText = document.getElementById("directions-text");
+        var userChoiceText = document.getElementById("userchoice-text");
+        var computerChoiceText = document.getElementById("computerchoice-text");
+        var winsText = document.getElementById("wins-text");
+        var lossesText = document.getElementById("losses-text");
+        var tiesText = document.getElementById("guesses left-text");
+        var tiesText = document.getElementById("your guesses so far");
 
-</script>
+        document.onkeyup = function (event) {
+
+            var userGuess = event.key;
+
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+            if ((userGuess === "a") && (computerGuess === "a")) {
+                wins++;
+            } else if ((userGuess === "b") && (computerGuess === "b")) {
+                wins++;
+            } else if ((userGuess === "c") && (computerGuess === "c")) {
+                wins++;
+            } else if ((userGuess === "d") && (computerGuess === "d")) {
+                wins++;
+            } else if ((userGuess === "e") && (computerGuess === "e")) {
+                wins++;
+            } else if ((userGuess === "f") && (computerGuess === "f")) {
+                wins++;
+            } else if ((userGuess === "g") && (computerGuess === "g")) {
+                wins++;
+            } else if ((userGuess === "h") && (computerGuess === "h")) {
+                wins++;
+            } else if ((userGuess === "i") && (computerGuess === "i")) {
+                wins++;
+            } else if ((userGuess === "j") && (computerGuess === "j")) {
+                wins++;
+            } else if ((userGuess === "k") && (computerGuess === "k")) {
+                wins++;
+            } else if ((userGuess === "l") && (computerGuess === "l")) {
+                wins++;
+            } else if ((userGuess === "m") && (computerGuess === "m")) {
+                wins++;
+            } else if ((userGuess === "n") && (computerGuess === "n")) {
+                wins++;
+            } else if ((userGuess === "o") && (computerGuess === "o")) {
+                wins++;
+            } else if ((userGuess === "p") && (computerGuess === "p")) {
+                wins++;
+            } else if ((userGuess === "q") && (computerGuess === "q")) {
+                wins++;
+            } else if ((userGuess === "r") && (computerGuess === "r")) {
+                wins++;
+            } else if ((userGuess === "s") && (computerGuess === "s")) {
+                wins++;
+            } else if ((userGuess === "t") && (computerGuess === "t")) {
+                wins++;
+            } else if ((userGuess === "u") && (computerGuess === "u")) {
+                wins++;
+            } else if ((userGuess === "v") && (computerGuess === "v")) {
+                wins++;
+            } else if ((userGuess === "w") && (computerGuess === "w")) {
+                wins++;
+            } else if ((userGuess === "x") && (computerGuess === "x")) {
+                wins++;
+            } else if ((userGuess === "y") && (computerGuess === "y")) {
+                wins++;
+            } else if ((userGuess === "z") && (computerGuess === "z")) {
+                wins++;
+            } else if ((userGuess === "x") && (computerGuess === "r")) {
+                losses++;
+            }
+
+            directionsText.textContent = "";
+
+            userChoiceText.textContent = "You chose: " + userGuess;
+            computerChoiceText.textContent = "The computer chose: " + computerGuess;
+            winsText.textContent = "wins: " + wins;
+            lossesText.textContent = "losses: " + losses;
+            guessesLeftText.guessesLeftText = "guesses left-text" + guessesLeftText;
+            yourGuessesSoFarText.textContent = "yourGuessesSoFar" + yourGuessesSoFarText;
+        }
+    };
+
+    </script>
 
 
 </body>
+
 </html>
